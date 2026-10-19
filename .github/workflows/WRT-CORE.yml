@@ -99,7 +99,7 @@ jobs:
           WRT_CACHE_BRANCH=${WRT_BRANCH//\//-}
           WRT_CACHE_TARGET="$WRT_TARGET-$WRT_SUBTARGET"
           WRT_CACHE_PREFIX="wrt-$WRT_CACHE_SOURCE-$WRT_CACHE_BRANCH-$WRT_CACHE_TARGET"
-          WRT_WIFI=$(grep -oE 'WIFI-(YES|NO)$' <<< "${WRT_CONFIG^^}" || true); WRT_WIFI=${WRT_WIFI:-none}
+          WRT_WIFI=$(grep -oE 'WIFI-(YES|NO|5G)$' <<< "${WRT_CONFIG^^}" || true); WRT_WIFI=${WRT_WIFI:-none}
 
           {
             echo "WRT_INFO=${WRT_SOURCE%%/*}"
